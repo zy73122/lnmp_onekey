@@ -1,0 +1,5 @@
+sh lnmp_pre.sh | tee lnmp_pre.log
+sh lnmp_mysql.sh | tee lnmp_mysql.log
+sh lnmp_nginx.sh | tee lnmp_nginx.log
+sh lnmp_php.sh | tee lnmp_php.log
+sh lnmp_post.sh | tee lnmp_post.log

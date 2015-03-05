@@ -1,0 +1,2 @@
+sh lnmp.sh
+sh lnmp_php-ext.sh

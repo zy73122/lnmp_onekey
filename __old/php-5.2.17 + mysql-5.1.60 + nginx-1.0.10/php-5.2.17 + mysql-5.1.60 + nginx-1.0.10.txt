@@ -1,0 +1,7 @@
+°²×°£º
+
+sh lnmp_pre.sh | tee lnmp_m.log
+sh lnmp_mysql.sh | tee lnmp_m.log
+sh lnmp_php.sh | tee lnmp_m.log
+sh lnmp_nginx.sh | tee lnmp_m.log
+sh lnmp_post.sh | tee lnmp_m.log

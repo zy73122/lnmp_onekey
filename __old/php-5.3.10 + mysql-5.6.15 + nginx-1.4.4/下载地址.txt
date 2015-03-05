@@ -1,0 +1,11 @@
+mysql:
+http://dev.mysql.com/get/Downloads/MySQL-5.5/mysql-5.5.20-linux2.6-i686.tar.gz/from/http://gd.tuwien.ac.at/db/mysql/
+http://dev.mysql.com/get/Downloads/MySQL-5.5/mysql-5.5.20-linux2.6-x86_64.tar.gz/from/http://gd.tuwien.ac.at/db/mysql/
+http://wiki.centos.org/AdditionalResources/Repositories/RPMForge
+http://cdn.mysql.com/Downloads/MySQL-5.6/mysql-5.6.15.tar.gz
+
+nginx:
+http://nginx.org/en/download.html
+
+php:
+http://cn.php.net/get/php-5.3.10.tar.gz/from/this/mirror
