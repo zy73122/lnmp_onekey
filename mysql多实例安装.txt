@@ -1,0 +1,19 @@
+http://wiki.centos.org/AdditionalResources/Repositories/RPMForge
+http://cdn.mysql.com/Downloads/MySQL-5.6/mysql-5.6.15.tar.gz
+
+
+
+
+#¶àÊµÀý
+mkdir /data/mysql_data_3308
+cp conf/my.cnf /data/mysql_data_3308
+cp init.d.mysqld_3308 /etc/init.d/mysqld_3308
+chmod +x /etc/init.d/mysqld_3308
+sed -i 's/3308/3308/g' /etc/init.d/mysqld_3308
+
+chown -R mysql.mysql /data/mysql_data_3308
+/usr/local/mysql/scripts/mysql_install_db --user=mysql --basedir=/usr/local/mysql/ --datadir=/data/mysql_data_3308
+
+/etc/init.d/mysqld_3308 start
+
+
