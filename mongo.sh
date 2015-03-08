@@ -65,7 +65,7 @@ eof
 # mongod --shutdown --dbpath=/data/mongodb/27017
 
 # service install
-cp init.d.mongo_27017 /etc/init.d/mongo_27017
+cp initd/init.d.mongo_27017 /etc/init.d/mongo_27017
 chmod 755 /etc/init.d/mongo_27017
 chkconfig --level 345 mongo_27017 on
 /etc/init.d/mongo_27017 start

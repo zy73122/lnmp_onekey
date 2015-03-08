@@ -244,7 +244,7 @@ function install_nginx()
 	#mv $nginx_basedir/conf/fcgi.conf $nginx_basedir/conf/fcgi.conf.old
 	#cp conf/fcgi.conf $nginx_basedir/conf/fcgi.conf
 
-	cp init.d.nginx /etc/init.d/nginx
+	cp initd/init.d.nginx /etc/init.d/nginx
 	chmod +x /etc/init.d/nginx
 
 	clear
@@ -295,7 +295,7 @@ function install_php()
 		cd ..
 		
 		#Services
-		cp init.d.php-fpm5.3 /etc/init.d/php-fpm
+		cp initd/init.d.php-fpm5.3 /etc/init.d/php-fpm
 		chmod +x /etc/init.d/php-fpm 
 		chkconfig --level 345 php-fpm on
 	#fi
@@ -442,7 +442,7 @@ function install_mysql()
 
 	# use default mysql.server
 	#cp $mysql_basedir/support-files/mysql.server /etc/init.d/mysqld
-	cp init.d.mysqld_3308 /etc/init.d/mysqld_3306
+	cp initd/init.d.mysqld_3308 /etc/init.d/mysqld_3306
 	sed -i "s/3308/3306/g" /etc/init.d/mysqld_3306
 	chmod 755 /etc/init.d/mysqld_3306
 
@@ -509,7 +509,7 @@ function install_mysql_anyport()
 	#多实例
 	mkdir /data/mysql_data_$mysqlport
 	cp conf/my.cnf /data/mysql_data_$mysqlport
-	cp init.d.mysqld_3308 /etc/init.d/mysqld_$mysqlport
+	cp initd/init.d.mysqld_3308 /etc/init.d/mysqld_$mysqlport
 	chmod +x /etc/init.d/mysqld_$mysqlport
 	sed -i "s/3308/$mysqlport/g" /etc/init.d/mysqld_$mysqlport
 

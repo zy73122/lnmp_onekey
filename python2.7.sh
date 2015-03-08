@@ -20,6 +20,8 @@ if [ ! -e /usr/bin/python2.7 ]; then
 	ln -s /usr/local/python2.7/lib/libpython2.7.so.1.0 /usr/lib
 	ln -s /usr/local/python2.7/bin/python2.7 /usr/bin
 	ln -s /usr/bin/python2.7 /usr/bin/python27
+	echo "/usr/local/python2.7/lib" >> /etc/ld.so.conf.d/python2.7.conf
+	/sbin/ldconfig
 	#/sbin/ldconfig -v
 fi
 if [ ! -e /usr/bin/python2.7 ]; then
@@ -56,6 +58,21 @@ ln -s /usr/local/python2.7/bin/ipython /usr/bin
 #python setup.py install
 #if [ $? -eq 0 ]; then exit; fi
 #cd ..
+
+
+#### python-networkx
+#/usr/local/python2.7/bin/easy_install setuptools
+#/usr/local/python2.7/bin/easy_install networkx
+
+
+#### Image Library£¨PIL£©
+#wget http://zlib.net/zlib-1.2.8.tar.gz
+#tar zxvf zlib-1.2.8.tar.gz
+#cd zlib-1.2.8
+#./configure
+#make && make install
+#pip install PIL --allow-external PIL --allow-unverified PIL
+
 
 # Done
 python2.7 -V
