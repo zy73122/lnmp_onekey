@@ -5,7 +5,7 @@ lnmp（linux+nginx+mysql+php）一键安装脚本，以及常见php扩展、mong
 
 # 安装方式  
 
-···shell
+```shell
 # ningx + MySQL + php 安装
 sh lnmp.sh  
 
@@ -17,4 +17,4 @@ sh python2.7.sh
 
 # mongodb+rockmongo安装
 sh mongo.sh
-···
+```
