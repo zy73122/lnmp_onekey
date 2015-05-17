@@ -1,9 +1,12 @@
 #!/bin/bash
 
 cur_dir=$(pwd)
-PHP_VERIOSN=php-5.6.2
-MYSQL_VERIOSN=php-5.6.2
-NGINX_VERIOSN=nginx-1.6.2
+#PHP_VERIOSN=php-5.6.9
+#MYSQL_VERIOSN=mysql-5.6.21
+#NGINX_VERIOSN=nginx-1.6.2
+PHP_VERIOSN=php-5.4.41
+MYSQL_VERIOSN=mysql-5.6.24
+NGINX_VERIOSN=nginx-1.8.0
 PHPMYADMIN_VERIOSN=phpMyAdmin-4.2.11-all-languages
 ROCKMONGO_VERIOSN=rockmongo-1.1.5
 #config for mysql
@@ -413,9 +416,9 @@ function install_mysql()
 
 	# MySQL install
 	cd $cur_dir
-	if [ ! -f "mysql-5.6.21.tar.gz" ]; then
+	if [ ! -f "$MYSQL_VERIOSN.tar.gz" ]; then
 		#wget -c http://cdn.mysql.com/Downloads/MySQL-5.6/mysql-5.6.15.tar.gz
-		wget -c http://dev.mysql.com/get/Downloads/MySQL-5.6/mysql-5.6.21.tar.gz
+		wget -c http://dev.mysql.com/get/Downloads/MySQL-5.6/$MYSQL_VERIOSN.tar.gz
 	fi
 	tar -zxf mysql-5.6.21.tar.gz
 	cd mysql-5.6.21
