@@ -35,9 +35,9 @@ if [ ! -f distribute-0.6.49.tar.gz ]; then
 fi
 tar zxf distribute-0.6.49.tar.gz
 cd distribute-0.6.49
-python2.7 setup.py install
-/usr/local/python2.7/bin/easy_install pip
-ln -s /usr/local/python2.7/bin/pip /usr/bin
+/usr/local/python2.7 setup.py install
+easy_install pip
+# ln -s /usr/local/python2.7/bin/pip /usr/bin
 
 
 # preinstall packages
@@ -65,7 +65,7 @@ ln -s /usr/local/python2.7/bin/ipython /usr/bin
 #/usr/local/python2.7/bin/easy_install networkx
 
 
-#### Image Library£¨PIL£©
+#### Image LibraryÂ£Â¨PILÂ£Â©
 #wget http://zlib.net/zlib-1.2.8.tar.gz
 #tar zxvf zlib-1.2.8.tar.gz
 #cd zlib-1.2.8
